@@ -6,7 +6,7 @@
 /*   By: abalueva <abalueva@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 18:01:56 by abalueva          #+#    #+#             */
-/*   Updated: 2019/11/02 21:06:03 by abalueva         ###   ########.fr       */
+/*   Updated: 2019/11/03 18:27:33 by abalueva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int			vld_file(const int fd, t_etrimino **head)
 		if (vld_xtr(alph_rem, buff, head, r_c) == -1)
 			return (-1);
 	}
-	if (alph_rem[1] == '\0' || r_c[1] == 1)
+	if (alph_rem[1] == '\0' || (r_c[1] == 1 && alph_rem[1] != 127))
 		return (r_c[1]);
 	return (-1);
 }

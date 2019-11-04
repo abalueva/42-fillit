@@ -6,7 +6,7 @@
 /*   By: abalueva <abalueva@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 16:36:47 by abalueva          #+#    #+#             */
-/*   Updated: 2019/11/02 14:42:57 by abalueva         ###   ########.fr       */
+/*   Updated: 2019/11/03 18:20:45 by abalueva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,8 @@ int			brd_find_size(int ttrmns)
 	int brd_size;
 
 	brd_size = 1;
-	ttrmns = ttrmns * 4;
-	while (++brd_size <= 11)
-		if (brd_size * brd_size >= ttrmns)
+	while (++brd_size <= 20)
+		if (brd_size * brd_size >= ttrmns * 4)
 			return (brd_size);
 	return (brd_size);
 }
